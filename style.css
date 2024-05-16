@@ -1,0 +1,248 @@
+/*
+===========
+CSS Reset
+===========
+*/
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+/*
+  ===========
+  GENERIC STYLES
+  ===========
+  */
+html,
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+/*
+  ===========
+  TYPOGRAPHY
+  ===========
+  */
+
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Red Hat Display", sans-serif;
+	font-weight: 500;
+	font-size: 1.6rem;
+}
+h1 {
+	font-size: 2.8rem;
+	/* Text Gradient */
+}
+.proceed-button,
+.close-button {
+	font-size: 1.8rem;
+}
+
+.special {
+	font-weight: 700;
+}
+.text {
+	text-align: center;
+}
+/*
+  ===========
+  LAYOUT
+  ===========
+  */
+/* ===== Border =======*/
+
+/* body {
+	border: 5px solid red;
+}
+main {
+	border: 2px solid brown;
+}
+.image-wrapper {
+	border: 2px solid orange;
+}
+.plan-wrapper {
+	border: 2px solid yellow;
+}
+
+.plan {
+	border: 2px solid rgb(97, 165, 42);
+} 
+*/
+
+body {
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	width: 90%;
+	height: 80%;
+	/* margin: 30% 10%; */
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 25px;
+	align-items: center;
+	padding-bottom: 8%;
+}
+
+.image-wrapper,
+.header-image {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.text {
+	width: 75%;
+}
+.plan-wrapper {
+	display: flex;
+	width: 90%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem;
+}
+
+.plan {
+	width: 50%;
+}
+
+.proceed-button {
+	border-style: none;
+	width: 90%;
+	padding: 1em;
+	border-radius: 10px;
+}
+.close-button {
+	border-style: none;
+	background-color: transparent;
+}
+/*
+  ===========
+  BACKGROUND/IMAGES
+  ===========
+  */
+body {
+	background: url(order-summary-component-main/images/pattern-background-mobile.svg)
+		top left no-repeat;
+}
+/*
+  ===========
+  COLORS
+  ===========
+  
+
+### Primary
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)
+  */
+.colors {
+	color: hsl(225, 100%, 94%);
+	color: hsl(245, 75%, 52%);
+
+	color: hsl(225, 100%, 98%);
+	color: hsl(224, 23%, 55%);
+	color: hsl(223, 47%, 23%);
+}
+body {
+	background-color: hsl(225, 100%, 94%);
+}
+main {
+	background-color: white;
+	color: hsl(224, 23%, 55%);
+}
+h1,
+.special {
+	color: black;
+}
+
+h1 {
+	text-wrap: balance;
+	text-align: center;
+	background-image: linear-gradient(
+		45deg,
+		#e0e8ff,
+		#3829e0,
+		#7280a7,
+		#1f2f56,
+		#000000,
+		#3829e0
+	);
+	background-size: cover;
+	background-clip: text;
+	color: transparent;
+}
+.plan-wrapper {
+	background-color: rgb(248, 249, 254);
+}
+.plan {
+}
+.proceed-button {
+	background-color: hsl(245, 75%, 52%);
+	color: hsl(225, 100%, 98%);
+	box-shadow: 6px 16px 16px hsl(225, 58%, 78%);
+}
+
+.close-button {
+	color: hsl(224, 23%, 55%);
+}
+
+/*
+  =============
+  ACTIVE-STATES
+  =============
+  */
+
+/*
+  =====================================
+  LARGE SCREENS 
+  =====================================
+  */
+
+@media (min-width: 701px) {
+	body {
+		background: url(order-summary-component-main/images/pattern-background-desktop.svg)
+			hsl(225, 100%, 94%) top left no-repeat;
+	}
+
+	main {
+		width: 30%;
+		height: 80%;
+		/* margin: 30% 10%; */
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		border-radius: 25px;
+		align-items: center;
+		padding-bottom: 40px;
+	}
+	.plan-wrapper,
+	.proceed-button {
+		width: 80%;
+	}
+}
